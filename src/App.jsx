@@ -29,7 +29,7 @@ const DATA = {
     location: "Bangkok, Thailand",
     avatar: {
       src: import.meta.env.BASE_URL + "me.jpg", 
-      alt: "Portrait of Theerawit <3",
+      alt: "Portrait of Theerawit",
     },
     contacts: [
       { type: "email", label: "pm.theerawit@gmail.com", href: "mailto:pm.theerawit@gmail.com", icon: Mail },
