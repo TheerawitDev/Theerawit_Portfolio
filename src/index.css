@@ -1,3 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-navy text-slate font-sans antialiased leading-relaxed overflow-x-hidden;
+  }
+
+  ::selection {
+    @apply bg-green text-navy;
+  }
+
+  /* Scrollbar Styles */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-navy;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-lightest-navy border-[3px] border-solid border-navy rounded-[10px];
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-light-slate;
+  }
+}
+
+@layer utilities {
+  .section-heading {
+    @apply flex items-center relative w-full text-[clamp(26px,5vw,32px)] text-lightest-slate font-semibold mb-10 whitespace-nowrap;
+  }
+  .section-heading::after {
+    @apply content-[''] block relative top-[2px] w-[300px] h-[1px] ml-5 bg-lightest-navy;
+  }
+  .section-heading::before {
+    @apply content-['.'] relative bottom-[4px] mr-2 text-green text-xl; 
+  }
+  
+  .link-underline {
+    @apply relative inline-block text-green no-underline transition-all duration-300;
+  }
+  .link-underline::after {
+    @apply content-[''] absolute w-0 h-[1px] bottom-0 left-0 bg-green transition-all duration-300 opacity-50;
+  }
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+}
+
+.glass-nav {
+    backdrop-filter: blur(10px);
+    background-color: rgba(10, 25, 47, 0.85);
+}
