@@ -19,7 +19,7 @@ const Projects = () => {
                 {/* Featured Projects Grid */}
                 <div className="flex flex-col gap-24 mt-10">
                     {featuredProjects.map((project, i) => (
-                        <div key={i} className={`relative grid grid-cols-12 items-center gap-10 ${i % 2 !== 0 ? 'text-left' : 'text-right'}`}>
+                        <div key={i} className={`relative grid grid-cols-12 items-center gap-10 ${i % 2 !== 0 ? 'text-left' : 'text-left md:text-right'}`}>
                             {/* Image area */}
                             <div className={`col-span-12 md:col-span-7 h-[300px] bg-green/20 rounded relative cursor-pointer overflow-hidden group ${i % 2 !== 0 ? 'md:order-last' : ''}`}>
                                 <div className="absolute inset-0 bg-navy/50 mix-blend-multiply group-hover:bg-transparent transition-all duration-300 z-10"></div>
@@ -31,16 +31,16 @@ const Projects = () => {
                             </div>
 
                             {/* Content */}
-                            <div className={`col-span-12 md:col-span-5 relative z-10 ${i % 2 !== 0 ? 'md:text-left text-left' : 'md:text-right text-right'} md:ml-[-50px] ${i % 2 !== 0 ? 'md:mr-[-50px] md:ml-0' : ''}`}>
+                            <div className={`col-span-12 md:col-span-5 relative z-10 ${i % 2 !== 0 ? 'text-left' : 'text-left md:text-right'} md:ml-[-50px] ${i % 2 !== 0 ? 'md:mr-[-50px] md:ml-0' : ''}`}>
                                 <p className="font-mono text-green text-sm my-2">Featured Project</p>
                                 <h3 className="text-2xl font-bold text-lightest-slate hover:text-green cursor-pointer transition-colors mb-4">{project.title}</h3>
                                 <div className="bg-light-navy p-6 rounded shadow-xl text-slate text-sm">
                                     {project.description}
                                 </div>
-                                <ul className={`flex flex-wrap mt-4 gap-4 text-mono text-xs text-slate ${i % 2 !== 0 ? 'justify-start' : 'justify-end'}`}>
+                                <ul className={`flex flex-wrap mt-4 gap-4 text-mono text-xs text-slate ${i % 2 !== 0 ? 'justify-start' : 'justify-start md:justify-end'}`}>
                                     {project.tech.map(t => <li key={t}>{t}</li>)}
                                 </ul>
-                                <div className={`flex mt-5 gap-4 ${i % 2 !== 0 ? 'justify-start' : 'justify-end'}`}>
+                                <div className={`flex mt-5 gap-4 ${i % 2 !== 0 ? 'justify-start' : 'justify-start md:justify-end'}`}>
                                     {project.links.github && project.links.github !== '#' && (
                                         <a href={project.links.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub Link">
                                             <Github className="w-5 h-5 hover:text-green cursor-pointer" />
