@@ -1,35 +1,12 @@
 import React, { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
+import { jobs } from '../data/experience';
+
 const Experience = () => {
     const [activeTab, setActiveTab] = useState(0);
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
-
-    const jobs = [
-        {
-            company: 'Luthenos Ltd.',
-            role: 'Robotics / Tech Engineer',
-            period: 'Present',
-            description: [
-                'Working on advanced robotics and technology projects.',
-                'Collaborating with a team to build innovative hardware solutions.',
-                'Focusing on research and development in the robotics field.',
-            ],
-            url: '#',
-        },
-        {
-            company: 'Horiza',
-            role: 'Founder & Freelance Developer',
-            period: '2023 - Present',
-            description: [
-                'Founded a freelance web development and software design portfolio.',
-                'Delivering high-quality web solutions for various clients.',
-                'Managing all aspects of the business, from client relations to deployment.',
-            ],
-            url: '#',
-        },
-    ];
 
     return (
         <section id="experience" ref={ref} className="max-w-[700px] mx-auto py-24">

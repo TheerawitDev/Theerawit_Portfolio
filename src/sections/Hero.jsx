@@ -39,7 +39,7 @@ const Hero = () => {
                         transition={{ delay: 0.9, duration: 0.5 }}
                         className="max-w-[540px] text-slate text-lg mb-12 sm:text-xl leading-relaxed"
                     >
-                        I'm a software engineer based in Bangkok, specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on robotics and tech at <span className="text-green">Luthenos Ltd</span>.
+                        I'm a software engineer based in Bangkok, specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on robotics, AI and tech at <span className="text-green">Horiza Ltd</span>.
                     </motion.p>
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
